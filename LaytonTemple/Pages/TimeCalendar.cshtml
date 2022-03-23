@@ -1,0 +1,71 @@
+﻿@page
+@model LaytonTemple.Pages.TimeCalendarModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Temple Appointments</h1>
+    <p>Sign up for a time below</p>
+    <b />
+
+    @*<div class="date">
+        <a class="btn btn-secondary" disabled>Previous</a>
+        <button class="btn btn-dark">March 23, 2022</button>
+        <a class="btn btn-danger">Next</a>*@
+    @*</div>*@
+    <br />
+
+    <table class="table table-sm table-striped table-bordered">
+
+        <thead>
+            <tr>
+                <th>March 23, 2022</th>
+                <th>March 24, 2022</th>
+                <th>March 25, 2022</th>
+                <th>March 26, 2022</th>
+                <th>March 27, 2022</th>
+                <th>March 28, 2022</th>
+                <th>March 29, 2022</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                @*<td class="text-center">
+                        <form method="post">
+                            <input type="hidden" name="timeId" value="@Model.TimeId" />
+                            <button typoe="submit" class="btn btn-primary" asp-page="/Form">8 A.M.</button>
+                        </form>
+                    </td>*@
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">8 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">8 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">8 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">8 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">8 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">8 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">8 A.M.</a></td>
+            </tr>
+            <tr>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">9 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">9 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">9 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">9 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">9 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">9 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">9 A.M.</a></td>
+            </tr>
+            <tr>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">10 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">10 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">10 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">10 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">10 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">10 A.M.</a></td>
+                <td><a class="btn btn-block btn-primary" asp-page="/Form">10 A.M.</a></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

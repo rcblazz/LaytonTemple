@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Times
+<div class="container">
+    <div class="text-center">
+        <br />
+        <h2>Layton Utah Temple Tours</h2>
+        <br />
+        <p>
+            We are thrilled to be able to share this beautiful temple with you! Please click the link below to schedule your tour at the
+            Layton Utah Temple.
+        </p>
+        <br />
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="TimeList">Schedule My Tour</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Reservations">View Reservations</a>
+        <br /><br />
+        <img src="~/img/templePic.jpeg" height="400" />
+        <br /><br />
+        <div class="text-left">
+            <p>General Tour Instructions:</p>
+            <ul>
+                <li>We allow groups of up to 15 people per tour.</li>
+                <li>Park on Rosewood (west side of the temple) and meet at the Visitors Center trailer.</li>
+                <li>Dress casual, except on Sunday</li>
+            </ul>
+            <p>Available Tours:</p>
+            <ul>
+                <li>Tour (Outdoor): We will walk on the sidewalk along Oak Hills and on Rosewood in front of the temple on uneven surfaces; please wear sturdy shoes.</li>
+                <li>Trailer Tour: On Sunday. Masks are required.</li>
+            </ul>
+            <p>We can only add a limited number of tours at this time. They will be removing the visitors center soon so that they can complete the landscaping. When the trailer is gone, we anticipate being able to talk to groups on the lawn of the church across the street or at the Morgan's backyard. We are trying to facilitate as many groups as possible, so please only sign-up when you can commit to coming on the selected date and time. We have a lot of last minute cancelations.</p>
+            <p>Please call or text 801-628-4488 with questions or special requests.</p>
+            <p>We can do groups on Saturday, please text me at 801-628-4488.</p>
+        </div>
+        <br />
+        <br />
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="TimeList">Schedule My Tour</a>
+        <br />
+        <br />
+    </div>
+</div>

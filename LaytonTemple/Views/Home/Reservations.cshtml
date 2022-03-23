@@ -1,0 +1,41 @@
+﻿@{ }
+@model List<TourGroup>
+
+
+@*This is the list of reservations. This view is just intended for the TAs to view. You can edit and delete appointments.*@ 
+
+    <div class="text-center">
+        <br />
+        <h1 class="display-4">Current Reservations</h1>
+        <br />
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <td>Time Slot</td>
+                    <td>Group Leader Name</td>
+                    <td>Group Size</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var apt in Model)
+                {
+    <tr>
+        <td>@apt.Timeslot</td>
+        <td>@apt.Name</td>
+        <td>@apt.Size</td>
+        <td>@apt.Email</td>
+        <td>@apt.Phone</td>
+        <td><a asp-controller="Home" asp-action="Edit" asp-route-groupid="@apt.GroupId">Edit</a></td>
+        <td><a asp-controller="Home" asp-action="Delete" asp-route-groupid="@apt.GroupId">Delete</a></td>
+    </tr>
+}
+            </tbody>
+        </table>
+
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="TimeList">View Open Timeslots</a>
+</div>

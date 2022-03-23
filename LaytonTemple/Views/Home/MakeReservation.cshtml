@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Reserve Your Tour";
+}
+
+@model LaytonTemple.Models.TourGroup
+
+@*Sign Up Page*@
+
+
+<div class="">
+
+    <h3>Sign up for a Temple Tour</h3>
+
+
+
+    <form method="post">
+
+
+        <div class="form-group">
+            <label asp-for="Timeslot">Your Appointment time is scheduled for: </label>
+            <input asp-for="Timeslot" type="text" class="form-control" readonly />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Name">Name of Group Leader</label>
+            <input asp-for="Name" type="text" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Size">Number in group</label>
+            <input asp-for="Size" type="number" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" type="email" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Phone">Phone Number</label>
+            <input asp-for="Phone" type="number" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Reserve My Tour</button>
+    </form>
+
+    <br />
+    <p>If you would like to change the time of your tour please go back to the last page</p>
+    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="TimeList">Go Back</a>
+
+    <div asp-validation-summary="All" style="color:red;"></div>
+
+</div>
+

@@ -1,0 +1,19 @@
+﻿@{
+
+}
+
+@model TourGroup
+
+@*This a the confirmation page*@
+
+
+<h1>Confirm Deletion</h1>
+
+
+<p>Are you sure you want to delete <b>@Model.Name</b></p>
+<form method="post" asp-controller="Home" asp-action="Delete">
+    <button type="submit">Delete</button>
+    <button asp-controller="Home" asp-action="Reservations">Cancel</button>
+
+    <input type="hidden" asp-for="GroupId" />
+</form>

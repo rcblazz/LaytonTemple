@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Times>
+
+
+<div class="text-center">
+    <br /> 
+    <h1 class="display-4">Temple Appointments</h1>
+    <p>Sign up for a time below</p>
+    <br />
+
+    <table class="table table-sm table-striped table-bordered">
+
+        <thead class="bold">
+            <tr>
+                <th>Available Appointments</th>
+                <th>Click to Reserve</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.Timeslot</td>
+
+                    <td>
+                        <form method="post" asp-controller="Home" asp-action="MakeReservation" asp-route-timeslot="@x.Timeslot" >
+                            <input type="hidden" name="timeId" value="@x.TimeId" />
+                            <button type="submit" class="btn btn-block btn-sm btn-primary">Reserve</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>
